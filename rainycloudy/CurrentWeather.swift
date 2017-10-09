@@ -35,7 +35,7 @@ class CurrentWeather{
     }
     var weatherType: String{
         if _weatherType == nil{
-            _weatherType = "bitetarace"
+            _weatherType = ""
         }
         return _weatherType
     }
