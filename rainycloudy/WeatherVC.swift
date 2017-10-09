@@ -20,19 +20,18 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     //je stock une intialisation de currenWeather ma class
     //depuis elle je peux ressortir mes varirables 
-    var currentWeather = CurrentWeather()
+    var currentWeather: CurrentWeather!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
-        
         currentWeather = CurrentWeather()
+        
         currentWeather.downloadWeatherDetails{
             self.updateUI()
+            
         }
-        
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
